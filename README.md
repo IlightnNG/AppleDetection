@@ -1,5 +1,11 @@
-# SSD: Single Shot MultiBox Detector
+# SSD: Single Shot MultiBox Detector（for apples）
+##用于亚太数模竞赛
+本程序为2023亚太数模赛赛题一的部分程序源代码
+主要基于SSD实现了对苹果的识别
+同时进行了对每张图片的苹果的数量，位置，成熟度，质量等参数进行统计和制表
+然而比赛时模型训练尚不成熟，有待修改
 
+##以下为原作者Readme，再次感谢
 ## 环境配置：
 * Python 3.6/3.7/3.8
 * Pytorch 1.7.1
@@ -31,7 +37,7 @@
 ## 数据集，本例程使用的是PASCAL VOC2012数据集(下载后放入项目当前文件夹中)
 * Pascal VOC2012 train/val数据集下载地址：http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar
 * Pascal VOC2007 test数据集请参考：http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
-* 如果不了解数据集或者想使用自己的数据集进行训练，请参考我的bilibili：https://b23.tv/F1kSCK
+* 如果不了解数据集或者想使用自己的数据集进行训练，请参考原up的bilibili：https://b23.tv/F1kSCK
 
 ## 训练方法
 * 确保提前准备好数据集
@@ -40,12 +46,9 @@
 * 若要使用多GPU训练，使用 "python -m torch.distributed.launch --nproc_per_node=8 --use_env train_multi_GPU.py" 指令,nproc_per_node参数为使用GPU数量
 * 训练过程中保存的`results.txt`是每个epoch在验证集上的COCO指标，前12个值是COCO指标，后面两个值是训练平均损失以及学习率
 
-## 如果对SSD算法原理不是很理解可参考我的bilibili
+## 如果对SSD算法原理不是很理解可参考原up的bilibili
 * https://www.bilibili.com/video/BV1fT4y1L7Gi
 
-## 进一步了解该项目，以及对SSD算法代码的分析可参考我的bilibili
+## 进一步了解该项目，以及对SSD算法代码的分析可参考原up的bilibili
 * https://www.bilibili.com/video/BV1vK411H771/
 
-## Resnet50 + SSD算法框架图
-![Resnet50 SSD](res50_ssd.png) 
-#
